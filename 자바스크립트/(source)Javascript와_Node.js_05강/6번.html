@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<script>
+			function up(){
+				let px = document.getElementById("result").style.fontSize;
+				
+				px = px.substring(0,2); 
+				document.getElementById("result").style.fontSize = (Number(px) + 10) + "px";
+			}
+
+			function down(){
+				document.getElementById("result").style.fontSize = "16px";
+			}
+
+			function check( checkbox ){
+				var lang = document.querySelectorAll(".lang");
+				
+				lang.forEach(function(item,index){
+					item.checked = checkbox.checked;
+				});
+
+				//for (var i = 0; i < lang.length; i++) {
+      			//    lang[i].checked = checkbox.checked;
+      			//}
+
+			}
+			</script>
+	
+	</head>
+	
+	<body>
+		<body>
+
+			<button onClick="up()">+</button><button onClick="down()">-</button>
+			<div id="result">
+			  안녕하세요.
+			</div>
+
+			
+			전체선택
+			<input type="checkbox" name="all" onclick="check(this)"><br>
+			<input type="checkbox" name="java" class="lang">java<br>
+			<input type="checkbox" name="sql" class="lang">sql<br>
+			<input type="checkbox" name="angular" class="lang">angular<br>
+		</body>
+	</body>
+
+</html>

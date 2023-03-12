@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>JavaScript</title>
+		
+		<script src="jquery-3.2.1.min.js"></script>
+		
+		<script>
+			
+			//$() 문서 객체 생성
+			$(document).ready(function(){
+			
+				var wrapObj = $("#wrap");
+				
+				
+				// <div>객체 생성 및 추가
+				//var divObj = $("<div> Hello jQuery! </div>");
+				//자식으로 들어 가겠다
+				//divObj.appendTo(wrapObj);				
+				
+				//divObj.css("background", "#0000ff");
+				
+				$("<div> Hello jQuery! </div>").appendTo($("#wrap")).css("background", "#ff0000");
+				
+				
+				// <a>객체 생성 및 추가
+				// var aObj = $("<a href='http://www.google.com' target='_blank'> google </a><br>");
+				// aObj.appendTo(wrapObj);
+				
+				
+				// // <img>객체 생성 및 추가				
+				// var imgObj = $("<img src='img/logo.png' /><br>");
+				// imgObj.appendTo(wrapObj);
+				
+				
+				 // <img>, 속성객체 생성 및 추가
+				var tempObj = {
+				 	src : "img/arm_mbed.png",
+				 	width : 297,
+				 	height : 124,
+				 	border : "5px"
+				};
+				
+				 var imgAObj = $("<img>", tempObj);
+				 imgAObj.appendTo(wrapObj);
+				
+			});
+			
+		</script>
+	</head>
+	
+	<body>
+		
+		<div id="wrap">
+			
+		</div>
+		
+	</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Javascript</title>
+		<!-- <script>
+		
+
+			/*
+				객체 속성과 메서드
+			*/
+			
+			var objCar = {
+				width : "3m",
+				height : "2m",
+				cc : "2000cc",
+				energy : 100,
+				speed : function(power) {
+					return this.energy * power;
+				}
+			};
+			
+			console.log("objCar.speed : " + objCar.speed(2));
+			
+			</script> -->
+	
+	</head>
+	
+	<body>
+		<script>
+			
+			let grade = {
+				kor : 0,
+				eng : 0,
+				math : 0,
+				getTotal : function(){
+					return this.kor + this.eng + this.math;
+				},
+				getAvg : function(){
+					return (this.kor + this.eng + this.math) / 3.0;
+				}				 
+			}
+			
+			grade.eng = Number( prompt("국어","국어"));
+			grade.kor = Number( prompt("영어","영어"));
+			grade.math = Number( prompt("수학","수학"));
+
+			document.write(grade.getTotal() + "<br>");
+			document.write(grade.getAvg() + "<br>");
+			
+			
+
+
+
+
+			// setInterval(function(){
+				
+			// 	var timer = new Date();
+
+			// 	var h = timer.getHours();
+			// 	var m = timer.getMinutes();
+			// 	var s = timer.getSeconds();
+				
+			// 	document.body.innerHTML = "";
+				
+			// 	document.write("<h1>" +  h + ":" + m + ":" + s + "</h1>");
+			// },1000);
+
+		</script>
+		
+
+			
+		</body>
+	</body>
+
+</html>

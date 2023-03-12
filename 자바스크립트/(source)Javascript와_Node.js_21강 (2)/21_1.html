@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> jQuery </title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			
+			$(document).ready(function(){
+				
+				
+				$(".logo").click(function(){
+					console.log("logo image click!");
+				});
+				
+				
+				/*
+				$(".logo").click(imgClickEventListener);
+				
+				function imgClickEventListener(){
+					console.log("logo image click!");
+					console.log("called imgClickEventListener");
+				};
+				*/
+			});
+			
+		</script>
+	</head>
+	
+	<body>
+		
+		<div>
+			<img class="logo" src="img/logo.png">
+		</div>
+		
+	</body>
+
+</html>
