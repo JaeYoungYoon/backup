@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>basic :: JavaScript Node Access</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+	color: #000;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 20px;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript Node Access</h1>
+<div class="container">
+	<ul id="tutorial">
+		<li class="html">HTML</li>
+		<li class="css">CSS</li>
+		<li class="css3">CSS3</li>
+		<li class="javascript">JavaScript</li>
+		<li class="jquery">jQuery</li>
+		<li class="blank"></li>
+	</ul>
+	<p id="portfolio">portfolio</p>
+</div>
+<script>
+// 1) 변수(Variables)
+var num=0;
+var traffic="bus";
+var bool=false;
+
+// 2) 배열(Array)
+var array1=new Array("one", "two", "three");
+var array2=["one", "two", "three"];
+// console.log(array1);
+// console.log(array1[0]);
+
+for(var i=0; i<array1.length; i++){
+	// console.log(array1[i]);
+}
+
+// 3) 연관배열(Object)
+var object1={
+	n1: "one",
+	n2: "two",
+	n3: "three"
+};
+// console.log(object1);
+// console.log(object1.n1);
+// console.log(object1["n1"]);
+
+for(var item in object1){
+	// console.log(item);
+	// console.log(object1.item); // undefined
+	// console.log(typeof item); // string
+	// console.log(item, object1[item]);
+}
+
+var object2={
+	variety: 10,
+	array: ["one", "two", "three"],
+	object: {n1: "one", n2: "two", n3: "three"},
+	fn: function(){
+		// console.log(this);
+		// console.log(this.variety);
+	}
+}
+
+// console.log(object2.variety);
+// console.log(object2.array);
+// console.log(object2.array[0]);
+// console.log(object2.object);
+// console.log(object2.object.n1);
+// object2.fn();
+</script>
+</body>
+</html>

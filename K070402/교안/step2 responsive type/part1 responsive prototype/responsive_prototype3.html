@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Media Quries</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	overflow-x: hidden;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #ccc;
+	color: #555;
+}
+.title {
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+}
+/*
+.box_group {
+	width: 100%;
+}
+.box_group > div {
+	float: left;
+	padding: 20px;
+	width: 25%;
+	line-height: 1.5;
+	font-size: 0.875em;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+*/
+
+.box_group {
+	display: table;
+	width: 100%;
+}
+.box_group > div {
+	display: table-cell;
+	padding: 20px;
+	width: 25%;
+	line-height: 1.5;
+	vertical-align: middle;
+	font-size: 0.875em;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+@media only screen and (max-width: 800px) {
+	.box_group > div {
+		width: 50%;
+	}
+	.box_group > .box3,
+	.box_group > .box4 {
+		display: none;
+	}
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">CSS3 Media Quries</h1>
+<div class="container">
+	<div class="box_group">
+		<div class="box1">
+			box1 :<br><br>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis erat at nisl ullamcorper, vitae fringilla tortor condimentum. Integer eget pellentesque mi. Donec semper nunc vitae metus tempus malesuada. Sed rhoncus tincidunt risus.</div>
+		<div class="box2">box2 :</div>
+		<div class="box3">box3 :</div>
+		<div class="box4">box4 : </div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Mobile Menu</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	height: 2000px;
+}
+body.fixed {
+	overflow-y: hidden;
+}
+#header { /* 수정 */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 3.75em;
+	font-size: 1em;
+	background-color: #24bbaf;
+}
+#header.fixed { /* 추가 : 윈도우 상단 좌표가 200px보다 커지면 fixed 클래스를 추가합니다. */
+	position: fixed;
+}
+#desktop {
+	text-align: center;
+}
+#desktop li {
+	display: inline-block;
+}
+#desktop li a {
+	display: block;
+	padding: 0 1.875em;
+	line-height: 4.286em;
+	font-size: 0.875em;
+	color: #fff;
+}
+#mobile {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+	padding: 6.25em 3.125em 3.125em 3.125em;
+	height: 100vh;
+	text-align: center;
+	background-color: rgba(0,0,0,.6);
+	box-sizing: border-box;
+}
+#mobile ul {
+	height: 66vh;
+	overflow-y: auto;
+}
+#mobile li a {
+	display: block;
+	line-height: 4.5;
+	font-size: 1.063em;
+	color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+}
+#mobile li:last-child a {
+	border-bottom: none;
+}
+#header .tab {
+	display: none;
+	position: absolute;
+	left: 0.625em;
+	top: 0.625em;
+	width: 2.5em;
+	height: 2.5em;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(images/toggle_button.png) no-repeat 0 0;
+	background-size: cover;
+}
+#header .tab.open {
+	background-position: -2.5em 0;
+}
+
+@media only screen and (max-width: 600px) {
+	#header {
+		font-size: 0.875em;
+	}
+	#desktop {
+		display: none;
+	}
+	#header .tab {
+		display: block;
+	}
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+	var body=document.body;
+	var tab=header.getElementsByClassName("tab")[0];
+	var w;
+	var t=0; // 추가
+
+	tab.addEventListener("click", function(e){
+		e.preventDefault();
+		body.classList.add("fixed");
+		gsap.fromTo(mobile, {display: "block", opacity: 0}, {opacity: 1, duration: 0.3});
+		tab.classList.add("open");
+	});
+	mobile.addEventListener("click", function(){
+		body.classList.remove("fixed");
+		gsap.to(mobile, {opacity: 0, duration: 0.3, onComplete: function(){
+			mobile.style.display="none";
+		}});
+		tab.classList.remove("open");
+	});
+	window.addEventListener("resize", function(){
+		w=window.innerWidth;
+
+		if(w > 600){
+			if(mobile.style.display == "block"){
+				body.classList.remove("fixed");
+				tab.classList.remove("open");
+				gsap.to(mobile, {opacity: 0, duration: 0.3, onComplete: function(){
+					mobile.style.display="none";
+				}});
+			}
+		}
+	});
+	window.addEventListener("scroll", function(){ // 추가
+		t=window.pageYOffset;
+		// console.log("t : "+t);
+
+		if(t > 80){
+			if(header.classList.contains("fixed") == false){
+				header.classList.add("fixed");
+				gsap.fromTo(header, {top: -60}, {top: 0, duration: 0.3, delay: 0.5});
+			}
+		}
+		else{
+			if(header.classList.contains("fixed") == true){
+				header.classList.remove("fixed");
+				header.removeAttribute("style");
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<header id="header">
+		<nav id="desktop">
+			<ul>
+				<li><a href="">MENU1</a></li>
+				<li><a href="">MENU2</a></li>
+				<li><a href="">MENU3</a></li>
+				<li><a href="">MENU4</a></li>
+				<li><a href="">MENU5</a></li>
+			</ul>
+		</nav>
+		<nav id="mobile">
+			<ul>
+				<li><a href="">MENU1</a></li>
+				<li><a href="">MENU2</a></li>
+				<li><a href="">MENU3</a></li>
+				<li><a href="">MENU4</a></li>
+				<li><a href="">MENU5</a></li>
+			</ul>
+		</nav>
+		<a href="" class="tab">tab</a>
+	</header>
+	<!-- <div class="dim"></div> -->
+</div>
+</body>
+</html>

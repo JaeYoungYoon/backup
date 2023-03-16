@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Media Quries</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	overflow-x: hidden;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #f1f1f1;
+	color: #555;
+}
+.title {
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+}
+.clearfix::before, .clearfix::after {
+	content: "";
+	display: block;
+}
+.clearfix::after {
+	clear: both;
+}
+
+/* step1 : 여백이 없는 경우 */
+/*
+.box_group .box {
+	float: left;
+	margin-bottom: 10px;
+	width: 25%;
+	height: 200px;
+	border-right: 1px solid #999;
+	box-sizing: border-box;
+}
+.box_group .box:first-child {
+	border-left: 1px solid #999;
+}
+
+@media only screen and (max-width: 800px) {
+	.box_group .box {
+		width: 50%;
+	}
+	.box_group .box:nth-child(2n+1) {
+		border-left: 1px solid #999;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.box_group .box {
+		width: 100%;
+	}
+	.box_group .box:nth-child(n+1) {
+		border-left: 1px solid #999;
+	}
+}
+*/
+
+/* step2 : 마진 정렬1(%) */
+/*
+.box_group .box {
+	float: left;
+	margin-left: 2%;
+	margin-bottom: 10px;
+	width: 23.5%;
+	height: 200px;
+	background-color: #ccc;
+}
+.box_group .box:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+@media only screen and (max-width: 800px) {
+	.box_group .box {
+		width: 49%;
+	}
+	.box_group .box:nth-child(2n+1) {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.box_group .box {
+		width: 100%;
+	}
+	.box_group .box:nth-child(n+1) {
+		margin-left: 0;
+	}
+}
+*/
+
+/* step3 : 마진 정렬2(px) */
+.box_group .box {
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: calc((100% - 30px)/4);
+	height: 200px;
+	background-color: #ccc;
+}
+.box_group .box:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+@media only screen and (max-width: 800px) {
+	.box_group .box {
+		width: calc((100% - 10px)/2);
+	}
+	.box_group .box:nth-child(2n+1) {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.box_group .box {
+		width: 100%;
+	}
+	.box_group .box:nth-child(n+1) {
+		margin-left: 0;
+	}
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">CSS3 Media Quries</h1>
+<div class="container">
+	<div class="box_group clearfix">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+</div>
+</body>
+</html>

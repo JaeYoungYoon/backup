@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: CSS3 Banner Effect</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.banner1 {
+	display: block;
+	width: 400px;
+	height: 284px;
+	overflow: hidden;
+}
+.banner1 img {
+	max-width: 100%; /* 이미지는 max-width입니다. */
+	transform: scale(1);
+	transition: transform 0.3s;
+}
+.banner1:hover img,
+.banner1:focus img { /* focus할 수 있는 배너를 제작합니다. */
+	transform: scale(1.1);
+}
+.banner2 {
+	display: block;
+	margin-top: 20px;
+	width: 684px;
+	height: 486px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(images/detail_banner.jpg) no-repeat center center;
+	background-size: 100%; /* 배경 이미지 변경에는 background-size가 필수입니다. */
+	transition: background-size 0.3s;
+}
+.banner2:hover,
+.banner2:focus {
+	background-size: 110%;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: CSS3 Banner Effect</h1>
+<div class="container">
+	<a href="" class="banner1"><img src="images/detail_banner.jpg" alt="banner1"></a>
+	<a href="" class="banner2">banner2</a>
+</div>
+</body>
+</html>

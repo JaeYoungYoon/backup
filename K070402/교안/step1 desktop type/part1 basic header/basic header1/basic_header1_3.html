@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Basic Header</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+/* reset */
+body, h1, h2, h3, h4, h5, h6, ul, ol, p {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+h1, h2, h3 {
+	font-size: 16px;
+}
+body {
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+}
+
+/* header */
+#header {
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+	height: 80px;
+	background-color: #d3dedc;
+}
+#header .logo {
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	transform: translateX(-50%);
+}
+#header .logo a {
+	display: block;
+	padding: 0 20px;
+	line-height: 60px;
+	font-size: 14px;
+	background-color: #92a9bd;
+}
+#header .utils {
+	float: left;
+	margin-top: 10px;
+}
+#header .utils a {
+	display: block;
+	padding: 0 20px;
+	line-height: 60px;
+	font-size: 14px;
+	background-color: #92a9bd;
+}
+#header .sns {
+	float: right;
+	margin-top: 10px;
+}
+#header .sns a {
+	display: block;
+	padding: 0 20px;
+	line-height: 60px;
+	font-size: 14px;
+	background-color: #92a9bd;
+}
+</style>
+</head>
+
+<body>
+<header id="header">
+	<div class="logo"><a href="">logo</a></div>
+	<div class="utils"><a href="">utils</a></div>
+	<div class="sns"><a href="">sns</a></div>
+</header>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: JavaScript Node Access</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+	color: #000;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 20px;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: JavaScript Node Access</h1>
+<div class="container">
+	<ul id="tutorial">
+		<li class="html">HTML</li>
+		<li class="css">CSS</li>
+		<li class="css3">CSS3</li>
+		<li class="javascript">JavaScript</li>
+		<li class="jquery">jQuery</li>
+		<li class="blank"></li>
+	</ul>
+	<p id="portfolio">portfolio</p>
+</div>
+<script>
+/*
+var ul=document.getElementById("tutorial");
+var liList=ul.children;
+
+for(var i=0; i<liList.length; i++){
+	liList[i].addEventListener("click", function(e){
+		var ul=e.target.parentNode;
+		ul.style.backgroundColor="#666";
+	});
+}
+*/
+
+/*
+var p=document.getElementsByTagName("p");
+
+for(var i=0; i<p.length; i++){
+	if(p[i].getAttribute("id") == "portfolio"){
+		p[i].removeAttribute("id");
+	}
+}
+*/
+
+/*
+var tutorial=document.getElementById("tutorial");
+var ajax=document.createElement("li");
+ajax.setAttribute("class", "ajax");
+// ajax.textContent="Ajax";
+ajax.innerText="Ajax";
+tutorial.appendChild(ajax);
+*/
+
+/*
+var ajax=document.createElement("li");
+ajax.setAttribute("class", "ajax");
+ajax.innerText="Ajax";
+
+var tutorial=document.getElementById("tutorial");
+var liList=tutorial.children;
+
+for(var i=0; i<liList.length; i++){
+	if(liList[i].className == "css3"){
+		var css3=liList[i];
+		// console.log(css3);
+	}
+}
+
+tutorial.insertBefore(ajax, css3);
+*/
+
+/*
+var tutorial=document.getElementById("tutorial");
+var jquery=document.getElementsByClassName("jquery")[0];
+tutorial.removeChild(jquery);
+*/
+
+/*
+var tutorial=document.getElementById("tutorial");
+var ajax=document.createElement("li");
+ajax.setAttribute("class", "ajax");
+// ajax.textContent="Ajax";
+ajax.innerText="Ajax";
+tutorial.appendChild(ajax);
+*/
+
+var tutorial=document.getElementById("tutorial");
+var portfolio=document.getElementById("portfolio");
+// var clone=portfolio.cloneNode(false);
+var clone=portfolio.cloneNode(true);
+tutorial.appendChild(clone);
+</script>
+</body>
+</html>

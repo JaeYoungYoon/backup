@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>project :: One Page Layout</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="shortcut icon" href="images/nabi_sybol.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body>
+<!--
+<div class="wrapper">
+	<div class="skip_nav">
+		<a href="">본문 바로가기</a>
+	</div>
+	<div class="lnb">
+		<div class="lnb_close">
+			<a href=""><i class="fa fa-plus"></i></a>
+		</div>
+		<div class="search">
+			<a href="">
+				<i class="fa fa-search"></i>
+				<img src="images/click_msg.png" alt="clisk message">
+			</a>
+		</div>
+	</div>
+	<header id="header">
+		<div class="upper">
+			<div class="logo">
+				<h1><a href=""><img src="images/nabi_logo1.png" alt="logo"></a></h1>
+			</div>
+			<nav class="nav">
+				<ul>
+					<li>
+						<a href="">About Nabi</a>
+						<ul>
+							<li><a href="">Nabi Story</a></li>
+							<li><a href="">Director's Letter</a></li>
+							<li><a href="">History</a></li>
+							<li><a href="">Visitor Info</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Project</a>
+						<ul>
+							<li><a href="">Current</a></li>
+							<li><a href="">Past</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Archive</a>
+						<ul>
+							<li><a href="">People</a></li>
+							<li><a href="">Artwork</a></li>
+							<li><a href="">Text</a></li>
+							<li><a href="">Story</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">News</a>
+						<ul>
+							<li><a href="">Notice</a></li>
+							<li><a href="">Press</a></li>
+							<li><a href="">FAQ</a></li>
+							<li><a href="">1:1 Request</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">+Nabi</a>
+						<ul>
+							<li><a href="">Nabimaker</a></li>
+							<li><a href="">나비미래연구소</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="keyvisual">
+			<div class="gallery">
+				<ul>
+					<li>
+						<img src="images/keyvisual1.png" alt="keyvisual1">
+						<div class="key_info">
+							<p>ART BY<br>
+							Refik Anadol, Melting Memories, 2017</p>
+						</div>
+					</li>
+					<li>
+						<img src="images/keyvisual2.png" alt="keyvisual2">
+						<div class="key_info">
+							<p>ART BY<br>
+							Hang Do Thi Duc, Data Selfie, 2016</p>
+						</div>
+					</li>
+					<li>
+						<img src="images/keyvisual3.png" alt="keyvisual3">
+						<div class="key_info">
+							<p>ART BY<br>
+							Pinar Yoldas, The Kitty AI: Artificial Intelligence for Governance, 2016</p>
+						</div>
+					</li>
+					<li>
+						<img src="images/keyvisual4.png" alt="keyvisual4">
+						<div class="key_info">
+							<p>ART BY<br>
+							Refik Anadol, Wind of Boston : Data Paintings, 2017</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="gallery_cont">
+				<div class="project_info">
+					<p>2021.11.01-2022.01.31</p>
+					<h2>
+						<a href="">
+							<span>Nabi's Current Project :</span>
+							<span>Neotopia: Data and humanity</span>
+						</a>
+					</h2>
+				</div>
+				<div class="num_control">
+					<ul>
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="area1">
+		<div class="content">
+			<div class="title">
+				<h4>
+					인간의 예술적 감성, 기술의 무한한 변화,<br>
+					그리고 생산의 힘이 만들어 내는 새로운 문화의 중심<br>
+					<span>Art Center Nabi</span>
+				</h4>
+				<div class="more_button"><a href="">+ MORE</a></div>
+			</div>
+			<div class="text">
+				아트센터 나비는 문화적 욕구를 생명력 있는 활동으로 이끌어내는 매개자의 역할을 지향합니다.<br>
+				기술에 경도되지 않고 현 시대의 문화를 비판적으로 인식하려는 노력(critique)과<br>
+				새로운 눈으로 세계를 바라보고 표현할 수 있는 열린 태도(creativity), 그리고 이와 같은 의식을 공유하면서<br>
+				대안을 찾아가는 사람들의 모임(community)과 아트센터 나비는 함께 하겠습니다.
+			</div>
+		</div>
+	</section>
+	<section id="area2">
+		<div class="list clearfix">
+			<ul>
+				<li>
+					<h3>Academy</h3>
+					<div class="content">
+						<a href="">
+							<div class="pic"><img src="images/academy_img2.png" alt="academy"></div>
+							<div class="dese">
+								<span>비트코인 비주얼리제이션 워크숍</span>
+								2018.01.21(Sun) / 10:00-17:00
+							</div>
+							<div class="dim">+</div>
+							<div class="choice"></div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<h3>Upcoming Project</h3>
+					<div class="content">
+						<a href="">
+							<div class="pic"><img src="images/upcoming_img2.png" alt="academy"></div>
+							<div class="dese">
+								<span>Artist Talk Kyle Mcdonald</span>
+								2018.02.23(Fri) / 19:00-21:30
+								</p>
+							</div>
+							<div class="dim">+</div>
+							<div class="choice"></div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<h3>Archive</h3>
+					<div class="content">
+						<a href="">
+							<div class="pic"><img src="images/archive_img2.png" alt="academy"></div>
+							<div class="dese">
+								<span>People / Creator Database</span>
+								Workspace-Unlimited
+							</div>
+							<div class="dim">+</div>
+							<div class="choice"></div>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="area3">
+		<div class="content">
+			<div class="inner">
+				<div class="box">
+					<h3>+Nabi</h3>
+					<img src="images/plus_nabi_img2.png" alt="+nabi image">
+				</div>
+				<a href="" class="plus_nabi">
+					<div class="content_text">
+						<p class="title">Nabimaker</p>
+						<p>
+							아트센터 나비는<br>사회적 제조의 열린 의미를 발견하고<br>Maker Culture의 확산을<br>함께 만들어갑니다.
+						</p>
+					</div>
+					<div class="more_button">+ MORE</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section id="area4">
+		<div class="content clearfix">
+			<ul>
+				<li class="video">
+					<h3>What's ON</h3>
+					<div class="inner">
+						<div class="video">
+							<video id="nabi_video" src="images/video/nabi_artist_residency.mp4" autoplay muted></video>
+						</div>
+					</div>
+				</li>
+				<li class="notice">
+					<h3>Notice</h3>
+					<div class="inner">
+						<div class="head">
+							<div class="cont">
+								<a href="">
+									<p>2022.02.02</p>
+									<span>[채용] 2018년 아트센터나비 상반기 인력 공개 채용 공고-2</span>
+									<div class="desc">
+										국내 유일의 디지털 아트 미술관인 아트센터 나비에서 함께 할 인재를 모집합니다. ■ 모집안내 - 신입, 경력 : '18년 
+										<div class="desc_inner">
+										상반기 공개 채용이 종료되는 시점에 입사 가능자 - 병역필 또는 면제자로서 해외여행에 결격사유가 없는자
+										<div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="list_table">
+							<div class="table">
+								<table>
+									<tbody>
+										<tr>
+											<td class="title"><a href="">- [채용] ‘2022년도 문화예술기관 연수단원 지원사업’ 연수단원(인턴) 모집</a></td>
+											<td class="subjec bold">2022.03.12</td>
+										</tr>
+										<tr>
+											<td class="title"><a href="">- [채용] 2022년 아트센터나비 상반기 인력 공개 채용 공고</a></td>
+											<td class="subjec bold">	2022.01.10</td>
+										</tr>
+										<tr>
+											<td class="title"><a href="">- [채용] 아트센터 나비_서울도시건축비엔날레 협력전 <Sharable City> 도슨트 모집</a></td>
+											<td class="subjec bold">2021.08.13</td>
+										</tr>
+										<tr>
+											<td class="title"><a href="">- Nabi Artist Residency 2021 최종선정자 발표</a></td>
+											<td class="subjec bold">2021.06.12</td>
+										</tr>
+										<tr>
+											<td class="title"><a href="">- [모집] 2021 나비 아티스트 레지던시 참여작가 모집</a></td>
+											<td class="subjec bold">2021.03.31</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="studies">
+					<h3>나비미래연구소</h3>
+					<div class="inner">
+						<a href="">
+							<div class="img"><img src="images/nabi_studies_img2.png" alt="studies"></div>
+							<div class="dim">+</div>
+							<div class="choice"></div>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="etc">
+		<div class="top"><a href="">TOP</a></div>
+	</section>
+	<footer id="footer">
+		<div class="info clearfix">
+			<div class="center">
+				<div class="main">
+					<span>아트센터 나비 미술관</span>
+					<span class="address">
+						서울시 종로구 서린동 99번지 SK본사빌딩 4층<br>
+						T. 02-2121-1031 ㅣ F. 02-2121-0914
+					</span>
+				</div>
+				<div class="icon_area">
+					<div class="icon_line"></div>
+					<ul>
+						<li>
+							<a href=""><i class="fa fa-instagram"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa fa-facebook-square"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa fa-youtube-square"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa fa-vimeo-square"></i></a>
+						</li>
+					</ul>
+				</div>
+				<div class="homepage">
+					<ul>
+						<li><a href="">개인정보취급방침</a></li>
+						<li><a href="">이용약관</a></li>
+						<li><a href="">영상정보처리기기 운영 관리방침</a></li>
+						<li><a href="">CONTACT US</a></li>
+						<li><a href="">SITE MAP</a></li>
+					</ul>
+				</div>
+				<div class="admin">
+					<ul>
+						<li><p>webmaster@nabi.or.kr</p></li>
+						<li><p>COPYRIGHT 2018 BY ART CENTER NABI. ALL RIGHT RESERVED.</p></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sub">
+				<div class="title">01</div>
+				<ul>
+					<li><span>대표자 : 노소영</span></li>
+					<li><span>사업자등록번호 : 207-82-07390</span></li>
+				</ul>
+			</div>
+			<div class="sub">
+				<div class="title">02</div>
+				<ul>
+					<li><a href="">nabimaker</a></li>
+					<li><a href="">나비미래연구소(nabi future studies)</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</div>
+-->
+</body>
+</html>

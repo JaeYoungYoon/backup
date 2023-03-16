@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Basic Header</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+<style>
+/* reset */
+body, h1, h2, h3, h4, h5, h6, ul, ol, p {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+h1, h2, h3 {
+	font-size: 16px;
+}
+img {
+	vertical-align: top; /* Reset CSS라고 생각하시면 됩니다. */
+}
+body {
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+}
+.skip_nav a {
+	/* display: block; */
+	position: fixed;
+	left: 0;
+	top: -1000px;
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	background-color: #000; /* 웹디자인의 '주조색'을 주로 지정합니다. */
+	color: #fff;
+}
+.skip_nav a:focus {
+	top: 0;
+}
+#header1 .top {
+	min-width: 1200px;
+	/* height: 71px; *//* 하위 덩어리로 잡히게 됩니다. 높이를 지정할 필요가 없죠. */
+	border-bottom: 1px solid #ccc;
+}
+#header1 .top .top_inner {
+	margin: 0 auto;
+	width: 1200px;
+	height: 70px;
+	font-size: 0.913em;
+}
+#header2 .top {
+	min-width: 1200px;
+	border-bottom: 1px solid #ccc;
+}
+#header2 .top .top_inner {
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	height: 70px;
+}
+#header2 .top .logo {
+	position: absolute;
+	left: 50%;
+	top: 15px;
+	transform: translateX(-50%);
+}
+#header2 .top nav {
+	float: left;
+}
+#header2 .top nav li {
+	display: inline-block;
+}
+#header2 .top nav li a {
+	display: block;
+	padding: 0 20px;
+	line-height: 71px;
+	font-size: 0.913em;
+}
+#header2 .top .utils {
+	float: right;
+	margin-top: 24px;
+}
+#header2 .top .utils .login {
+	display: inline-block;
+	vertical-align: middle;
+}
+#header2 .top .utils .login li {
+	display: inline-block;
+	position: relative;
+}
+#header2 .top .utils .login li:first-child::after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: -3px;
+	top: 6px;
+	width: 1px;
+	height: 12px;
+	background-color: #ccc;
+}
+#header2 .top .utils .login li a {
+	display: block;
+	padding: 0 8px;
+	line-height: 1.75;
+	font-size: 0.913em;
+}
+#header2 .top .utils .icon {
+	display: inline-block;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+#header2 .top .utils .icon li {
+	display: inline-block;
+	margin: 0 5px;
+	vertical-align: middle;
+}
+#header2 .top .utils .icon li a.location {
+	display: block;
+	width: 19px;
+	height: 25px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(images/btn_location.png) no-repeat 0 0;
+}
+.button1 {
+	margin: 100px;
+}
+.button1 li {
+	display: inline-block;
+	margin: 0 10px;
+	vertical-align: middle;
+}
+.button1 li .checkbox {
+	display: block;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(images/spr_form.png) no-repeat 0 0;
+}
+.button2 .checkbox {
+	display: block;
+	margin: 100px;
+	width: 56px;
+	height: 33px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(images/spr_form.png) no-repeat 0 -66px;
+}
+.button2 .checkbox:hover {
+	background-position: -72px -66px;
+}
+</style>
+</head>
+
+<body>
+<div class="case1">
+	<div class="skip_nav">
+		<a href="">본문 바로가기</a>
+	</div>
+	<div class="header">
+		<header id="header1">
+			<div class="top">
+				<div class="top_inner">top</div>
+			</div>
+		</header>
+	</div>
+</div>
+
+<div class="case2">
+	<div class="header">
+		<header id="header2">
+			<div class="top">
+				<div class="top_inner">
+					<div class="logo">
+						<h1 id="logo">
+							<a href=""><img src="images/logo.png" alt="logo"></a>
+						</h1>
+					</div>
+					<nav id="gnb">
+						<ul>
+							<li><a href="">PRODUCTS</a></li>
+							<li><a href="">PARTICLE</a></li>
+							<li><a href="">PARTICLE</a></li>
+						</ul>
+					</nav>
+					<div class="utils">
+						<div class="login">
+							<ul>
+								<li><a href="">고객지원</a></li>
+								<li><a href="">로그인</a></li>
+							</ul>
+						</div>
+						<div class="icon">
+							<ul>
+								<li><a href=""><img src="images/btn_search.png" alt="search"></a></li>
+								<li><a href="" class="location">로케이션</a></li>
+								<li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+</div>
+
+<div class="button1">
+	<ul>
+		<li><a href=""><img src="images/ico_select1_arrow.png" alt="arrow"></a></li>
+		<li><a href="" class="checkbox">check</a></li>
+	</ul>
+</div>
+
+<div class="button2">
+	<a href="" class="checkbox">check</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Media Quries</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Domine&display=swap">
+<style>
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, dl, dt, dd {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+img {
+	vertical-align: top;
+}
+.clearfix::before, .clearfix::after {
+	content: "";
+	display: block;
+}
+.clearfix::after {
+	clear: both;
+}
+body {
+	font-family: "Open Sans", "Noto Sans KR", sans-serif;
+	font-size: 1em;
+}
+
+/* portfolio */
+#portfolio {
+	padding: 6.25em 0 4.375em;
+	background-color: #f7f7f7;
+}
+#portfolio .inner {
+	margin: 0 auto;
+	max-width: 940px;
+	text-align: center;
+}
+#portfolio .title h3 {
+	font-size: 1.875em;
+	font-weight: 600;
+}
+#portfolio .content {
+	margin-top: 70px;
+}
+#portfolio .content li {
+	float: left;
+	margin-left: 2%;
+	margin-bottom: 50px;
+	width: calc((100% - 4%)/3);
+}
+#portfolio .content li:nth-child(3n+1) {
+	margin-left: 0;
+}
+#portfolio .content li a {
+	display: block;
+	position: relative;
+}
+#portfolio .content li a::after {
+	content: "";
+	display: block;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(252,207,255,.3);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+#portfolio .content li a:hover::after,
+#portfolio .content li a:focus::after {
+	opacity: 1;
+}
+#portfolio .content li a .photo {
+	overflow: hidden;
+}
+#portfolio .content li a .photo img {
+	width: 100%;
+	transform: scale(1);
+	transition: transform 0.3s;
+}
+#portfolio .content li a:hover .photo img,
+#portfolio .content li a:focus .photo img {
+	transform: scale(1.05);
+}
+#portfolio .content li a .desc {
+	padding: 24px 10px;
+	background-color: #fff;
+}
+#portfolio .content li a .desc dl dt {
+	line-height: 1.75;
+	font-weight: 700;
+}
+#portfolio .content li a .desc dl dd {
+	line-height: 1.75;
+	font-family: "Domine", serif;
+	font-size: 0.875em;
+	font-style: italic;
+	color: #838383;
+}
+
+@media only screen and (max-width: 720px) {
+	#portfolio .content li {
+		width: calc((100% - 2%)/2);
+	}
+	#portfolio .content li:nth-child(3n+1) {
+		margin-left: 2%;
+	}
+	#portfolio .content li:nth-child(2n+1) {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 460px) {
+	body {
+		font-size: 0.875em;
+	}
+	#portfolio .content li {
+		width: 100%;
+	}
+	#portfolio .content li:nth-child(n+1) {
+		margin-left: 0;
+	}
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+	<section id="portfolio">
+		<div class="inner">
+			<div class="title">
+				<h3>OUR PORTFOLIO</h3>
+			</div>
+			<div class="content clearfix">
+				<ul>
+					<li>
+						<a href="">
+							<div class="photo"><img src="images/port1.png" alt="Port1"></div>
+							<div class="desc">
+								<dl>
+									<dt>한백식품 쇼핑몰 리뉴얼</dt>
+									<dd>WEB / MOBILE</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="photo"><img src="images/port2.png" alt="Port2"></div>
+							<div class="desc">
+								<dl>
+									<dt>한국BNC 사이트 리뉴얼</dt>
+									<dd>WEB / MOBILE / BRAND</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="photo"><img src="images/port3.png" alt="Port3"></div>
+							<div class="desc">
+								<dl>
+									<dt>대평 사이트 리뉴얼</dt>
+									<dd>WEB / MOBILE</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="photo"><img src="images/port4.png" alt="Port4"></div>
+							<div class="desc">
+								<dl>
+									<dt>토마토시스템 사이트 리뉴얼</dt>
+									<dd>WEB</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="photo"><img src="images/port5.png" alt="Port5"></div>
+							<div class="desc">
+								<dl>
+									<dt>대교 상상 KIDS 영상제작</dt>
+									<dd>PROMOTION</dd>
+								</dl>
+							</div>
+						</a>
+					<li>
+						<a href="">
+							<div class="photo"><img src="images/port6.png" alt="Port6"></div>
+							<div class="desc">
+								<dl>
+									<dt>바이오리더스 사이트 리뉴얼</dt>
+									<dd>Branding</dd>
+								</dl>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</div>
+</body>
+</html>
